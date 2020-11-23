@@ -1,0 +1,14 @@
+.test {
+	border: 4px solid white;
+	background-color: #f2f2f2;
+	box-shadow: 5px 10px;
+}
+
+.inner-div-image {
+	position: relative;
+}
+
+.inner-div-image img {
+	position: absolute;
+	right: 69%;
+}
