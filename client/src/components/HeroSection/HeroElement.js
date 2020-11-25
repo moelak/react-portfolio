@@ -70,7 +70,7 @@ export const HeroH1 = styled.h1`
 	-ms-user-select: none; /* Internet Explorer/Edge */
 
 	@media screen and (max-width: 780px) {
-		font-size: 38px;
+		font-size: 34px;
 	}
 
 	@media screen and (max-width: 480px) {
@@ -93,7 +93,7 @@ export const HeroP = styled.p`
 	-ms-user-select: none; /* Internet Explorer/Edge */
 
 	@media screen and (max-width: 780px) {
-		font-size: 24px;
+		font-size: 22px;
 		width: 90%;
 	}
 

@@ -6,7 +6,7 @@
 }
 .testimonials .card {
 	position: relative;
-	width: 350px;
+	width: 380px;
 	margin: 0 auto;
 	background: #333;
 	padding: 20px;
@@ -15,10 +15,17 @@
 	box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
 	overflow: hidden;
 }
-.layer svg {
-	font-size: 28px;
-	color: green;
+.layer-left svg {
+	font-size: 24px;
+	color: #43d39f;
 	margin-bottom: 15px;
+	margin-right: 90%;
+}
+.layer-right svg {
+	font-size: 24px;
+	color: #43d39f;
+	margin-bottom: 15px;
+	margin-left: 90%;
 }
 .testimonials .card:hover .layer {
 	top: 0;
@@ -53,6 +60,20 @@
 	font-size: 14px;
 	transition: 0.5s;
 }
-/* .testimonials .card:hover .content .details h2 span {
-	color: #fff;
-} */
+.swiper-container-horizontal > .swiper-scrollbar {
+	position: absolute;
+	left: 1%;
+	bottom: 3px;
+	z-index: 50;
+	height: 5px;
+	width: 98%;
+	display: none;
+}
+
+.details {
+	margin-top: 20px;
+}
+
+.swiper-container {
+	margin-top: -100px;
+}

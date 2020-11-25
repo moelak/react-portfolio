@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -10,7 +10,9 @@ import 'swiper/components/scrollbar/scrollbar.scss';
 import 'swiper/swiper.scss';
 
 import './style.css';
-import { FaQuoteLeft } from 'react-icons/fa';
+import { FaQuoteLeft, FaQuoteRight } from 'react-icons/fa';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 // install Swiper components
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
@@ -45,45 +47,54 @@ const data = [
 ];
 
 function App() {
+	useEffect(() => {
+		Aos.init({ duration: 1000 });
+	}, []);
 	return (
-		<Swiper
-			spaceBetween={20}
-			slidesPerView={1}
-			navigation
-			pagination={{ clickable: true }}
-			scrollbar={{ draggable: true }}
-			onSlideChange={() => console.log('slide change')}
-			onSwiper={swiper => console.log(swiper)}
-		>
-			{data.map(user => (
-				<SwiperSlide key={user.id} className="slide">
-					<div class="testimonials">
-						<div class="card">
-							<div class="layer">
-								<FaQuoteLeft />
-							</div>
-							<div class="content">
-								<p>
-									{user.readMore
-										? user.testimonial + ' Read more...'
-										: user.testimonial}
-								</p>
-								<div class="image">
-									<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Circle-icons-profile.svg/768px-Circle-icons-profile.svg.png" />
+		<div id="testimonial">
+			<Swiper
+				spaceBetween={20}
+				slidesPerView={1}
+				navigation
+				pagination={{ clickable: true }}
+				scrollbar={{ draggable: true }}
+				onSlideChange={() => console.log('slide change')}
+				onSwiper={swiper => console.log(swiper)}
+				data-aos="zoom-out"
+			>
+				{data.map(user => (
+					<SwiperSlide key={user.id} className="slide">
+						<div class="testimonials">
+							<div class="card">
+								<div class="layer-left">
+									<FaQuoteLeft />
 								</div>
-								<div class="details">
-									<h2>
-										{user.name}
-										<br />
-										<span>{user.jobTitle}</span>
-									</h2>
+								<div class="content">
+									<p>
+										{user.readMore
+											? user.testimonial + ' Read more...'
+											: user.testimonial}
+									</p>
+									<div class="layer-right">
+										<FaQuoteRight />
+									</div>
+									<div class="image">
+										<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Circle-icons-profile.svg/768px-Circle-icons-profile.svg.png" />
+									</div>
+									<div class="details">
+										<h2>
+											{user.name}
+											<br />
+											<span>{user.jobTitle}</span>
+										</h2>
+									</div>
 								</div>
 							</div>
 						</div>
-					</div>
-				</SwiperSlide>
-			))}
-		</Swiper>
+					</SwiperSlide>
+				))}
+			</Swiper>
+		</div>
 	);
 }
 
