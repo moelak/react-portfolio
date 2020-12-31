@@ -2,6 +2,7 @@
 /.pnp
 .pnp.js
 /coverage
+.proxy.js
 .DS_Store
 .env.local
 .env.development.local
