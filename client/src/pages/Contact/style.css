@@ -1,0 +1,14 @@
+.col-md-6.contact-Form {
+	margin-left: 50%;
+	transform: translate(-50%, 10px);
+}
+
+.googleMap-iframe {
+	z-index: -200;
+}
+
+@media screen and (max-width: 290px) {
+	form {
+		width: 227px;
+	}
+}

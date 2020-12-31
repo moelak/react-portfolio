@@ -1,43 +1,50 @@
 {
-  "name": "mern",
-  "version": "0.1.0",
-  "private": true,
-  "proxy": "http://localhost:3001/",
-  "dependencies": {
-    "@material-ui/core": "^4.11.0",
-    "@material-ui/icons": "^4.9.1",
-    "aos": "^2.3.4",
-    "axios": "^0.18.1",
-    "bootstrap": "^4.5.3",
-    "gsap": "^3.5.1",
-    "http-proxy-middleware": "^1.0.6",
-    "material-kit": "^2.0.4",
-    "mdbreact": "^4.27.0",
-    "node-sass": "^4.14.1",
-    "react": "^16.13.1",
-    "react-bootstrap": "^1.4.0",
-    "react-dom": "^16.13.1",
-    "react-icons": "^3.11.0",
-    "react-iframe": "^1.8.0",
-    "react-router-dom": "^5.1.2",
-    "react-scripts": "3.4.3",
-    "react-scroll": "^1.8.1",
-    "react-scrollspy-nav": "^1.2.4",
-    "react-spring": "^8.0.27",
-    "reset-css": "^5.0.1",
-    "styled-components": "^5.2.1",
-    "swiper": "^6.3.5"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
-  },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+	"name": "profile",
+	"version": "0.1.0",
+	"private": true,
+	"secure": false,
+	"engines": {
+		"node": "12.x"
+	},
+	"dependencies": {
+		"@material-ui/core": "^4.11.0",
+		"@material-ui/icons": "^4.9.1",
+		"aos": "^2.3.4",
+		"axios": "^0.18.1",
+		"bootstrap": "^4.5.3",
+		"gsap": "^3.5.1",
+		"http-proxy-middleware": "^1.0.6",
+		"proxy": "^1.0.2",
+		"material-kit": "^2.0.4",
+		"mdbreact": "^4.27.0",
+		"node-sass": "^4.14.1",
+		"react": "^16.13.1",
+		"react-bootstrap": "^1.4.0",
+		"react-dom": "^16.13.1",
+		"react-icons": "^3.11.0",
+		"react-iframe": "^1.8.0",
+		"react-router": "^5.2.0",
+		"react-router-dom": "^5.1.2",
+		"react-scripts": "3.4.3",
+		"react-scroll": "^1.8.1",
+		"react-scrollspy-nav": "^1.2.4",
+		"react-spring": "^8.0.27",
+		"react-transition-group": "^4.4.1",
+		"reset-css": "^5.0.1",
+		"styled-components": "^5.2.1",
+		"swiper": "^6.3.5",
+		"validator": "^13.5.2"
+	},
+	"scripts": {
+		"start": "react-scripts start",
+		"build": "react-scripts build",
+		"test": "react-scripts test --env=jsdom",
+		"eject": "react-scripts eject"
+	},
+	"browserslist": [
+		">0.2%",
+		"not dead",
+		"not ie <= 11",
+		"not op_mini all"
+	]
 }

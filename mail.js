@@ -2,25 +2,25 @@ const mailer = require('nodemailer');
 const { Hello } = require('./hello_template');
 const { Thanks } = require('./thanks_template');
 
-const getEmailData = (to, name, template) => {
+const getEmailData = (name, email, subject, textarea, template) => {
 	let data = null;
 
 	switch (template) {
 		case 'hello':
 			data = {
-				from: 'John Ahn <jaewon@gmail.com>',
-				to,
-				subject: `Hello ${name}`,
-				html: Hello(),
+				from: `${email}`,
+				to: `m.laknahour1990@gmail.com`,
+				subject: `${subject}`,
+				html: Hello(textarea, subject),
 			};
 			break;
 
 		case 'thanks':
 			data = {
-				from: 'John Ahn <jaewon@gmail.com>',
-				to,
+				from: 'Moe Laknahour <m.laknahour1990@gmail.com>',
+				to: `${email}`,
 				subject: `Hello ${name}`,
-				html: Thanks(),
+				html: Thanks(name),
 			};
 			break;
 		default:
@@ -29,19 +29,19 @@ const getEmailData = (to, name, template) => {
 	return data;
 };
 
-const sendEmail = (to, name, type) => {
+const sendEmail = (name, email, subject, textarea, type) => {
 	const smtpTransport = mailer.createTransport({
 		service: 'Mailgun',
 		auth: {
-			user: 'postmaster@sandbox70c99d0ebf1e4f8086d8d14621768d0e.mailgun.org',
-			pass: '52602b0f87d345eaa962d430b798b0ce-0d2e38f7-119294ca',
+			user: process.env.MAILGUN_SMTP_USERNAME,
+			pass: process.env.MAILGUN_SMTP_PASS,
 		},
 		tls: {
 			rejectUnauthorized: false,
 		},
 	});
 
-	const mail = getEmailData(to, name, type);
+	const mail = getEmailData(name, email, subject, textarea, type);
 
 	smtpTransport.sendMail(mail, function (error, response) {
 		if (error) {

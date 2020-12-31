@@ -1,29 +1,42 @@
-import React, { Component, useEffect } from 'react';
-import Navigation from '../../components/Navigation';
-import HeroSections from '../../components/HeroSection';
-import About from '../../components/About';
-import Testimonials from '../../components/Testimonials';
-import Projects from '../../components/Projects';
-import Contact from '../../components/Contact';
-import Footer from '../../components/Footer';
-import Aos from 'aos';
-import 'aos/dist/aos.css';
+import React from 'react';
+import Video from '../../Video/networking3.mp4';
+import './style.css';
+import { VideoBg } from './HeroElement';
+import Pdf from '../../pdf/Resume-Mohammad-Laknahour.pdf';
+import { MDBMask, MDBView } from 'mdbreact';
 
-const Home = () => {
-	useEffect(() => {
-		Aos.init({ duration: 2000 });
-	}, []);
+const HeroSections = () => {
 	return (
-		<>
-			<Navigation />
-			<HeroSections />
-			<About />
-			<Testimonials />
-			<Projects />
-			<Contact />
-			<Footer />
-		</>
+		<div className="hero-wrapper home">
+			<MDBView>
+				<VideoBg autoPlay loop muted src={Video} type="video/mp4" />
+
+				<MDBMask pattern={8} className="flex-center"></MDBMask>
+			</MDBView>
+
+			<div className="overlay">
+				<div className="hero-content">
+					<h1>I'm a full stack Developer</h1>
+					<p>
+						I am results-oriented individual with unique background in computer
+						science and software engineering.
+					</p>
+					<div className="btns">
+						<button
+							className="download_btn"
+							onClick={event => {
+								event.preventDefault();
+								window.open(Pdf);
+							}}
+						>
+							Download Resume
+						</button>
+
+						{/* <a href="/about" className="arrow right"></a> */}
+					</div>
+				</div>
+			</div>
+		</div>
 	);
 };
-
-export default Home;
+export default HeroSections;
