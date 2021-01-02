@@ -8,11 +8,8 @@ import { MDBMask, MDBView } from 'mdbreact';
 const HeroSections = () => {
 	return (
 		<div className="hero-wrapper home">
-			<MDBView>
-				<VideoBg autoPlay loop muted src={Video} type="video/mp4" />
 
-				<MDBMask pattern={8} className="flex-center"></MDBMask>
-			</MDBView>
+			<VideoBg autoPlay loop muted src={Video} type="video/mp4" />
 
 			<div className="overlay">
 				<div className="hero-content">
