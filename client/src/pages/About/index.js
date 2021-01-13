@@ -24,8 +24,8 @@ const About = () => {
 							/>
 						</div>
 						<h2 className="title">
-							<span class="about__words1">About</span>
-							<span class="about__words2">Me</span>
+							<span className="about__words1">About</span>
+							<span className="about__words2">Me</span>
 						</h2>
 
 						<div className="text-container">

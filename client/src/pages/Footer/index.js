@@ -15,17 +15,17 @@ const Footer = () => {
 					/>
 				</defs>
 
-				<use id="wave3" class="wave" xlinkHref="#wave" x="0" y="-2"></use>
-				<use id="wave2" class="wave" xlinkHref="#wave" x="0" y="0"></use>
+				<use id="wave3" className="wave" xlinkHref="#wave" x="0" y="-2"></use>
+				<use id="wave2" className="wave" xlinkHref="#wave" x="0" y="0"></use>
 			</svg>
 
 			<div>
-				<div class="social__icon">
+				<div className="social__icon">
 					Created by Moe ©2020
-					<span class="linkedin">
+					<span className="linkedin">
 						<SocialIcon url="https://www.linkedin.com/in/mohammad-laknahour-24279b109/" />{' '}
 					</span>
-					<span class="github">
+					<span className="github">
 						<SocialIcon url="https://github.com/moelak" />
 					</span>
 				</div>

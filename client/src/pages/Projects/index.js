@@ -110,7 +110,7 @@ const Projects = () => {
 
 	return (
 		<div className="project-container" id="project">
-			<div class="header__project">
+			<div className="header__project">
 				<h1>
 					<span className="pro__color">Pro</span>
 					<span className="jects__color">jects</span>

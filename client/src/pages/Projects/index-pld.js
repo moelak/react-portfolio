@@ -68,9 +68,9 @@ const Projects = () => {
 
 	return (
 		<div className="project-container" id="project" data-aos="fade">
-			<div class="header__project">
+			<div className="header__project">
 				<h1>
-					<span class="pro__color">Pro</span>jects
+					<span className="pro__color">Pro</span>jects
 				</h1>
 			</div>
 			<div className="content-wrapper">

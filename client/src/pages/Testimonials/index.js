@@ -26,10 +26,8 @@ function App() {
 	return (
 		<div id="testimonial" className="testimonial">
 			<div className="testimonials">
-				<div class="header__testimonial">
+				<div className="header__testimonial">
 					<h1 className="testimonial_header">Testimonial</h1>
-					{/* <div class="right__line"></div>
-					<div class="left__line"></div> */}
 				</div>
 
 				<div className="card" data-aos="fade-right">
