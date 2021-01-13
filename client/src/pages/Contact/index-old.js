@@ -1,8 +1,19 @@
 import React, { useState } from 'react';
+import {
+	MDBContainer,
+	MDBRow,
+	MDBCol,
+	MDBBtn,
+	MDBIcon,
+	MDBInput,
+} from 'mdbreact';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+import 'bootstrap-css-only/css/bootstrap.min.css';
+import 'mdbreact/dist/css/mdb.css';
 import './style.css';
 import axios from 'axios';
 import Alert from 'react-bootstrap/Alert';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import validator from 'validator';
 
 const FormPage = () => {
 	const [name, setName] = useState('');
@@ -12,7 +23,6 @@ const FormPage = () => {
 	const [showSuccess, setShowSuccess] = useState(false);
 	const [showDanger, setShowDanger] = useState(false);
 	const [activeBtn, setActiveBtn] = useState(true);
-
 
 	const handleClick = event => {
 		event.preventDefault();
@@ -74,10 +84,10 @@ const FormPage = () => {
 		}
 	};
 
-
 	return (
-		<div id="contact" className="container contact-form">
-            	<Alert show={showSuccess} variant="success">
+		<div className="contact" id="contact">
+			<MDBContainer>
+				<Alert show={showSuccess} variant="success">
 					<Alert.Heading>Success message:</Alert.Heading>
 					<p>
 						Your message has been sent. I will get back to you as soon as
@@ -89,45 +99,76 @@ const FormPage = () => {
 					<Alert.Heading>Error message:</Alert.Heading>
 					<p>There are errors on the form. Please fix them before continuing</p>
 				</Alert>
-                <div className="contact-image">
-                <img src="https://image.ibb.co/kUagtU/rocket_contact.png" alt="rocket_contact"/>
-            </div>
-                        <form method="post">
-                <h2>Contact Me</h2>
-               <div className="row">
-                    <div className="col-md-6">
-                        <div className="form-group">
-                            <input id="name" label="Your name"type="text" name="txtName" className="form-control" placeholder="Your Name..." 	value={name}
+
+				<MDBRow>
+					<MDBCol md="6" className="contact-Form">
+						<form onSubmit={handleSubmit} className="needs-validation">
+							<h3 className="h3 text-center mb-4">Contact Me</h3>
+							<div className="grey-text">
+								<MDBInput
+									id="name"
+									label="Your name"
+									icon="user"
+									group
+									type="text"
+									validate
+									error="wrong"
+									success="right"
+									value={name}
 									onChange={handleClick}
-									required/>
-                        </div>
-                        <div className="form-group">
-                            <input id="email"
-									label="Your email" type="email" name="txtEmail" className="form-control" placeholder="Your Email..." 	value={email}
-									onChange={handleClick} />
-                        </div>
-                        <div className="form-group">
-                            <input id="subject"
-									label="Subject" type="text" name="txtPhone" className="form-control" placeholder="Subject..." value={subject}
+									required
+								>
+									<div className="valid-feedback">Looks good!</div>
+								</MDBInput>
+								<MDBInput
+									id="email"
+									label="Your email"
+									icon="envelope"
+									type="email"
+									value={email}
 									onChange={handleClick}
-									required />
-                        </div>
-                       
-                          <div className="form-group">
-                            <textarea 	id="textarea"
-									type="textarea" name="txtMsg" className="form-control" placeholder="Your Message..." rows={6} value={textarea}
+								/>
+
+								<MDBInput
+									id="subject"
+									label="Subject"
+									icon="tag"
+									group
+									type="text"
+									validate
+									error="wrong"
+									success="right"
+									value={subject}
 									onChange={handleClick}
-									required></textarea>
-                        </div>
-                         <div className="form-group btn-submit">
-                           
-                            <button type="submit" className="btnContact" onClick={handleSubmit}
-									>Submit</button>
-                        </div>
-                    </div>
-               
-                </div>
-            </form>
+									required
+								/>
+								<MDBInput
+									id="textarea"
+									type="textarea"
+									rows="4"
+									label="Your message"
+									icon="pencil-alt"
+									value={textarea}
+									onChange={handleClick}
+									required
+								/>
+							</div>
+							<div className="text-center">
+								<MDBBtn
+									outline
+									color="secondary"
+									type="submit"
+									onClick={handleSubmit}
+									disabled={activeBtn}
+								>
+									Send
+									<MDBIcon far icon="paper-plane" className="ml-1" />
+								</MDBBtn>
+							</div>
+						</form>
+					</MDBCol>
+				</MDBRow>
+			</MDBContainer>
 		</div>
 	);
 };

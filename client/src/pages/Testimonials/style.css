@@ -1,8 +1,47 @@
+.testimonial {
+	background: white;
+	width: 100%;
+	margin: 20px auto;
+	/* min-height: 80vh !important; */
+}
+
 .testimonials {
-	margin: 100px auto 100px;
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-	grid-gap: 20px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 70px;
+	padding-bottom: 150px;
+}
+
+.header__testimonial {
+	width: 100%;
+	text-align: center;
+	position: relative;
+	padding-top: 30px;
+}
+.header__testimonial h1 {
+	max-width: 390px;
+	color: black;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	text-shadow: 4px 4px 4px grey;
+	margin: auto;
+}
+.right__line {
+	border: 2px dotted white;
+	height: 365px;
+	position: absolute;
+	left: 50%;
+	margin-left: -3px;
+	top: 50px;
+}
+.left__line {
+	border: 2px dotted white;
+	width: 24%;
+	position: absolute;
+	margin-left: 0;
+	transform: translate(158%, 10px);
+	top: 402px;
+	/* z-index: 2; */
 }
 .testimonials .card {
 	position: relative;
@@ -12,8 +51,10 @@
 	padding: 20px;
 	box-sizing: border-box;
 	text-align: center;
-	box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+	box-shadow: 10px 10px 5px grey;
 	overflow: hidden;
+	border-radius: 1.25rem;
+	border: 2px dotted white;
 }
 .layer-left svg {
 	font-size: 24px;
@@ -25,7 +66,7 @@
 	font-size: 24px;
 	color: #43d39f;
 	margin-bottom: 15px;
-	margin-left: 90%;
+	margin-left: 58%;
 }
 .testimonials .card:hover .layer {
 	top: 0;
@@ -45,7 +86,7 @@
 	margin: 0 auto;
 	border-radius: 50%;
 	overflow: hidden;
-	border: 4px solid #fff;
+	border: 2px solid #fff;
 	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 .image img {
@@ -73,64 +114,23 @@
 .details {
 	margin-top: 20px;
 }
-
-.swiper-container {
-	margin-top: -100px;
+@media only screen and (max-width: 879px) {
+	.right__line {
+		display: none;
+	}
+	.left__line {
+		display: none;
+	}
 }
 
-.swiper-slide {
-	overflow: auto;
-}
-
-@media screen and (max-width: 415px) {
-	.layer-left svg {
-		font-size: 18px;
-		color: #43d39f;
-		margin-bottom: 15px;
-		margin-right: 90%;
-	}
-	.layer-right svg {
-		font-size: 18px;
-		color: #43d39f;
-		margin-bottom: 15px;
-		margin-left: 90%;
-	}
-	.testimonials .card .content p {
-		font-size: 16px;
-		line-height: 24px;
-		color: #fff;
-	}
-
+@media only screen and (max-width: 321px) {
 	.testimonials .card {
-		position: relative;
-		width: 280px;
-		height: 560px;
-		margin: 0 auto;
-		background: #333;
-		padding: 20px;
-		box-sizing: border-box;
-		text-align: center;
-		box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
-		overflow: hidden;
+		width: 300px;
 	}
 }
 
-@media screen and (max-width: 280px) {
+@media only screen and (max-width: 281px) {
 	.testimonials .card {
-		position: relative;
-		width: 270px;
-		height: 550px;
-		margin: 0 auto;
-		background: #333;
-		padding: 20px;
-		box-sizing: border-box;
-		text-align: center;
-		box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
-		overflow: hidden;
-	}
-	.testimonials .card .content p {
-		font-size: 14px;
-		line-height: 24px;
-		color: #fff;
+		width: 268px;
 	}
 }

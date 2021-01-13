@@ -7,6 +7,14 @@
 }
 #about {
 	position: relative;
+	background: black;
+}
+.about__words1 {
+	color: #49d8ff;
+	margin: 0;
+}
+.about__words2 {
+	color: #6cb13e;
 }
 
 .about-container {
@@ -20,6 +28,7 @@
 h2.title {
 	display: flex;
 	justify-content: center;
+	color: white !important;
 }
 
 .text-container {
@@ -36,6 +45,7 @@ h2.title {
 
 .paragraph {
 	padding-top: 20px;
+	letter-spacing: 1px;
 }
 
 .img {
@@ -137,7 +147,7 @@ h2.title {
 	width: 360px;
 	height: 640px;
 	margin: auto;
-	border: 16px black solid;
+	border: 16px white solid;
 	border-top-width: 60px;
 	border-bottom-width: 60px;
 	border-radius: 36px;
@@ -167,8 +177,9 @@ h2.title {
 	left: 50%;
 	bottom: -65px;
 	transform: translate(-50%, -50%);
-	background: #333;
+	background: white;
 	border-radius: 50%;
+	border: 2px solid silver;
 }
 
 /* The screen (or content) of the device */
@@ -176,80 +187,18 @@ h2.title {
 	width: 328px;
 	height: 520px;
 	overflow: auto;
+	color: white;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+.smartphone .content::-webkit-scrollbar {
+	display: none;
 }
 
 .top_image img {
 	width: 328px;
 }
-/* ---------------- */
-/* 
-.arrow {
-	position: absolute;
-	right: 20px;
-	width: 4vmin;
-	height: 4vmin;
-	background: transparent;
-	border-bottom: 6px solid #06a8ff;
-	border-right: 6px solid #06a8ff;
-	border-radius: 11px;
-	box-shadow: 0 0 0 lightgrey;
-	transition: all 200ms ease;
-}
-.arrow.left {
-	left: 0%;
-	top: 100.5%;
-	-webkit-transform: translate3d(0, -50%, 0) rotate(-135deg);
-	transform: translate3d(0, -50%, 0) rotate(-135deg);
-	animation: animate-left 8s infinite;
-}
-.arrow.right {
-	right: 0%;
-	top: 102%;
-	-webkit-transform: translate3d(0, -50%, 0) rotate(45deg);
-	transform: translate3d(0, -50%, 0) rotate(45deg);
-	animation: animate-right 8s infinite;
-}
-.arrow:hover {
-	border-color: orange;
-}
-.arrow:before {
-	content: '';
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	-webkit-transform: translate(-40%, -60%) rotate(90deg);
-	transform: translate(-40%, -60%) rotate(90deg);
-	width: 200%;
-	height: 200%;
-}
-
-@keyframes animate-right {
-	0% {
-		opacity: 0;
-		transform: rotate(-45deg) translate(-65px, -65px);
-	}
-	50% {
-		opacity: 1;
-	}
-	100% {
-		opacity: 0;
-		transform: rotate(-45deg) translate(-45px, -45px);
-	}
-}
-
-@keyframes animate-left {
-	0% {
-		opacity: 0;
-		transform: rotate(140deg) translate(-65px, -65px);
-	}
-	50% {
-		opacity: 1;
-	}
-	100% {
-		opacity: 0;
-		transform: rotate(140deg) translate(-45px, -45px);
-	}
-} */
 
 @media screen and (max-width: 415px) {
 	.smartphone .content {
@@ -271,7 +220,7 @@ h2.title {
 
 	h2.title {
 		margin: 15px 0;
-		color: #333;
+		color: white;
 		font-weight: 600;
 		text-transform: uppercase;
 		font-size: 1.5rem;

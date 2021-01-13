@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import { SidebarData } from './SidebarData';
 import './Sidebar.css';
+import { Link } from 'react-scroll';
 
 function Sidebar() {
 	const [click, setClick] = useState(false);
@@ -15,10 +15,21 @@ function Sidebar() {
 		setSelectedMenueItem(title);
 	};
 
+	const updatetheActive = () => {};
+
 	return (
 		<>
 			<nav className="navbar">
-				<Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
+				<Link
+					to="home"
+					smooth={true}
+					duration={1000}
+					className="navbar-logo"
+					onClick={() => {
+						closeMobileMenu();
+						updatetheActive();
+					}}
+				>
 					MOE
 					<i className="fab fa-firstdraft" />
 				</Link>
@@ -35,7 +46,12 @@ function Sidebar() {
 							<li className="nav-item" key={index}>
 								<Link
 									to={sidebarItem.path}
-									onClick={() => displayColor(sidebarItem.title)}
+									smooth={true}
+									duration={1000}
+									onClick={() => {
+										displayColor(sidebarItem.title);
+										closeMobileMenu();
+									}}
 									className={
 										isItemSelected ? sidebarItem.active_class_Name : 'nav-links'
 									}

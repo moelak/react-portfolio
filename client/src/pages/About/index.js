@@ -23,7 +23,10 @@ const About = () => {
 								src="https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/168257270/original/f78696dbacb2929525009ef4f3380f8ebdee8bab/develop-mern-stack-application.jpg"
 							/>
 						</div>
-						<h2 className="title">About Me</h2>
+						<h2 className="title">
+							<span class="about__words1">About</span>
+							<span class="about__words2">Me</span>
+						</h2>
 
 						<div className="text-container">
 							<div className="paragraph">
@@ -42,8 +45,6 @@ const About = () => {
 								am a hard worker and over achiever.
 							</div>
 						</div>
-						{/* <a href="/testimonials" className="arrow right"></a>
-						<a href="/" className="arrow left"></a> */}
 					</div>
 				</div>
 			</div>

@@ -44,7 +44,7 @@ export const VideoBg = styled.video`
 	-o-object-fit: cover;
 	width: 100vw;
 	height: 100vh;
-	position: fixed !important;
+
 	top: 0;
 	left: 0;
 `;
