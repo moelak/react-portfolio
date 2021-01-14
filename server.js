@@ -1,14 +1,13 @@
 const express = require('express');
-const bodyParser = require('body-parser');
-const cookieParser = require('cookie-parser');
+const session = require('express-session');
 
+// Setting up port and requiring models for syncing
+const PORT = process.env.PORT || 8080;
+
+// Creating express app and configuring middleware needed for authentication
 const app = express();
-const PORT = process.env.PORT || 3001;
-
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
-app.use(cookieParser());
-
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 if (process.env.NODE_ENV === 'production') {
 	// Exprees will serve up production assets
 	app.use(express.static('client/build'));

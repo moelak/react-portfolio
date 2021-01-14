@@ -11,21 +11,33 @@
 		"start:prod": "node server.js",
 		"start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
 		"client": "cd client && npm run start",
-		"seed": "node scripts/seedDB.js",
 		"install": "cd client && npm install",
 		"build": "cd client && npm run build",
 		"heroku-postbuild": "npm run build"
 	},
+	"keywords": [],
 	"author": "",
 	"license": "ISC",
 	"dependencies": {
-		"body-parser": "^1.19.0",
-		"cookie-parser": "^1.4.4",
-		"express": "^4.17.1",
-		"nodemailer": "^6.3.0"
+		"bcryptjs": "2.4.3",
+		"compression": "^1.7.4",
+		"concurrently": "^5.3.0",
+		"dotenv": "^8.2.0",
+		"express": "^4.17.0",
+		"express-session": "^1.16.1",
+		"nodemailer": "^6.4.13",
+		"nodemon": "^2.0.6",
+		"chai": "^4.1.2",
+		"chai-http": "^4.0.0",
+		"cross-env": "^5.2.0",
+		"mocha": "^5.2.0",
+		"prettier": "1.19.1"
 	},
 	"devDependencies": {
-		"concurrently": "^4.1.2",
-		"nodemon": "^1.19.2"
+		"chai": "^4.1.2",
+		"chai-http": "^4.0.0",
+		"cross-env": "^5.2.0",
+		"mocha": "^5.2.0",
+		"prettier": "1.19.1"
 	}
 }
