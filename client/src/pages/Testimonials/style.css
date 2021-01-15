@@ -25,9 +25,9 @@
 	letter-spacing: 2px;
 	text-shadow: 4px 4px 4px grey;
 	margin: auto;
+	font-weight: 800;
 }
 .right__line {
-	border: 2px dotted white;
 	height: 365px;
 	position: absolute;
 	left: 50%;
@@ -35,7 +35,6 @@
 	top: 50px;
 }
 .left__line {
-	border: 2px dotted white;
 	width: 24%;
 	position: absolute;
 	margin-left: 0;
@@ -54,7 +53,6 @@
 	box-shadow: 10px 10px 5px grey;
 	overflow: hidden;
 	border-radius: 1.25rem;
-	border: 2px dotted white;
 }
 .layer-left svg {
 	font-size: 24px;
@@ -96,7 +94,7 @@
 	font-size: 18px;
 	color: #fff;
 }
-.testimonials .card .content .details h2 span {
+.testimonials .card .content .details span {
 	color: #03a9f4;
 	font-size: 14px;
 	transition: 0.5s;
@@ -120,6 +118,32 @@
 	}
 	.left__line {
 		display: none;
+	}
+}
+
+@media only screen and (max-width: 560px) {
+	.header__testimonial h1 {
+		font-size: 32px;
+	}
+
+	.testimonials .card .content p {
+		font-size: 16px;
+		letter-spacing: 1px;
+	}
+
+	.testimonials .card {
+		width: 330px;
+	}
+	.details h2 {
+		font-size: 14px !important;
+	}
+
+	.layer-left svg {
+		font-size: 18px;
+	}
+	.layer-right svg {
+		font-size: 18px;
+		margin-left: 78%;
 	}
 }
 

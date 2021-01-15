@@ -87,23 +87,26 @@ const FormPage = () => {
 	return (
 		<div className="contact" id="contact">
 			<MDBContainer>
-				<Alert show={showSuccess} variant="success">
-					<Alert.Heading>Success message:</Alert.Heading>
-					<p>
-						Your message has been sent. I will get back to you as soon as
-						possible!
-					</p>
-				</Alert>
-
-				<Alert show={showDanger} variant="danger">
-					<Alert.Heading>Error message:</Alert.Heading>
-					<p>There are errors on the form. Please fix them before continuing</p>
-				</Alert>
-
 				<MDBRow>
 					<MDBCol md="6" className="contact-Form">
 						<form onSubmit={handleSubmit} className="needs-validation">
 							<h3 className="h3 text-center mb-4">Contact Me</h3>
+
+							<Alert show={showSuccess} variant="success">
+								<Alert.Heading>Success message:</Alert.Heading>
+								<p>
+									Your message has been sent. I will get back to you as soon as
+									possible!
+								</p>
+							</Alert>
+
+							<Alert show={showDanger} variant="danger">
+								<Alert.Heading>Error message:</Alert.Heading>
+								<p>
+									There are errors on the form. Please fix them before
+									continuing
+								</p>
+							</Alert>
 							<div className="grey-text">
 								<MDBInput
 									id="name"

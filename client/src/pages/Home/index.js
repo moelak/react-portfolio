@@ -18,14 +18,14 @@ const HeroSections = () => {
 
 			<div className="overlay">
 				<div className="hero-content">
-					<h1 data-aos="fade-right">
+					<h1 className="home__header" data-aos="fade-right">
 						<span className="hero__words1">I'm</span>
 						<span className="hero__words2">a</span>
 						<span className="hero__words3">full</span>
 						<span className="hero__words4">stack</span>
 						<span className="hero__words5">Developer</span>
 					</h1>
-					<p data-aos="fade-left">
+					<p className="home__paragraph" data-aos="fade-left">
 						I am results-oriented individual with unique background in computer
 						science and software engineering.
 					</p>

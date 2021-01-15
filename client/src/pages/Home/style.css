@@ -100,11 +100,8 @@
 	.hero-content {
 		padding: 15px;
 	}
-	.hero-wrapper div h1 {
-		font-size: 28px;
-	}
 	.hero-wrapper div p {
-		font-size: 16px;
+		font-size: 15px;
 		margin-bottom: 30px;
 	}
 	.hero-wrapper button {
@@ -116,5 +113,8 @@
 		background: #000;
 		padding: 0 30px;
 		transition: all 0.3s;
+	}
+	.hero-wrapper div h1 {
+		font-size: 26px;
 	}
 }

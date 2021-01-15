@@ -52,11 +52,9 @@ function App() {
 							<img alt="place holder" src={Aidin} />
 						</div>
 						<div className="details">
-							<h2>
-								Aidin Sadighi
-								<br />
-								<span>Senior Software Engineer III (L6) @ Amazon</span>
-							</h2>
+							<h2>Aidin Sadighi</h2>
+
+							<span>Senior Software Engineer III (L6) @ Amazon</span>
 						</div>
 					</div>
 				</div>
@@ -83,11 +81,9 @@ function App() {
 							<img alt="place holder" src={Thomas} />
 						</div>
 						<div className="details">
-							<h2>
-								Thomas Zeliff
-								<br />
-								<span>Vice President of Operations at ExakTime</span>
-							</h2>
+							<h2>Thomas Zeliff</h2>
+
+							<span>Vice President of Operations at ExakTime</span>
 						</div>
 					</div>
 				</div>

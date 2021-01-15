@@ -37,9 +37,6 @@ footer div {
 	width: 100%;
 }
 
-.linkedin:hover {
-}
-
 @keyframes drop {
 	0% {
 		transform: translateY(25px);
@@ -61,4 +58,9 @@ footer div {
 	to {
 		transform: translateX(-100%);
 	}
+}
+
+svg.social-svg {
+	width: 70% !important;
+	height: 70% !important;
 }

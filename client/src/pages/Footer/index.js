@@ -20,15 +20,13 @@ const Footer = () => {
 			</svg>
 
 			<div>
-				<div className="social__icon">
-					Created by Moe ©2020
-					<span className="linkedin">
-						<SocialIcon url="https://www.linkedin.com/in/mohammad-laknahour-24279b109/" />{' '}
-					</span>
-					<span className="github">
-						<SocialIcon url="https://github.com/moelak" />
-					</span>
-				</div>
+				<div className="social__icon">Created by Moe ©2020</div>
+				<span className="linkedin">
+					<SocialIcon url="https://www.linkedin.com/in/mohammad-laknahour-24279b109/" />{' '}
+				</span>
+				<span className="github">
+					<SocialIcon url="https://github.com/moelak" />
+				</span>
 			</div>
 		</footer>
 	);

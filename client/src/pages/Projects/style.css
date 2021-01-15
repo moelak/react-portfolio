@@ -7,14 +7,12 @@
 	background-color: black;
 }
 
-
 .slide {
 	transform: scale(0.6);
 	transition: transform 300ms;
 	opacity: 0.5;
 	margin: 30px auto;
 }
-
 
 .arrow {
 	color: #fff;
@@ -172,6 +170,12 @@ h2.news-card__title {
 	.news-card:hover .news-card__image {
 		transform: scale(1.2);
 		z-index: -1;
+	}
+}
+
+@media only screen and (max-width: 560px) {
+	.header__project h1 {
+		font-size: 32px;
 	}
 }
 

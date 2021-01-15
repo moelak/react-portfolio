@@ -86,7 +86,7 @@ ul {
 	display: none;
 }
 
-span {
+.nav-item span {
 	margin-left: 16px;
 }
 
