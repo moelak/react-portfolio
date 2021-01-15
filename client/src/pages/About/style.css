@@ -31,6 +31,10 @@ h2.title {
 	color: white !important;
 }
 
+h2.title span {
+	margin-left: 8px;
+}
+
 .text-container {
 	width: 300px;
 	margin: 7px;

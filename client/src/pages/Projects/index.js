@@ -16,7 +16,7 @@ const projectData = [
 	{
 		id: 2,
 		image: 'https://digitalasset.intuit.com/IMAGE/A8ViK8rl9/mint-XS.jpg',
-		title: 'BudgetTracker',
+		title: 'Budget Tracker',
 		animation: 'fade-down',
 		text: `The budget tracker will be able to add expenses and deposits to their budget with or without a connection. When entering transactions offline, they should populate the total when brought back online.`,
 		link: 'https://github.com/moelak/budgetTracker',
@@ -137,7 +137,7 @@ const Projects = () => {
 								className="news-card__image"
 							/>
 							<div className="news-card__text-wrapper">
-								<h2 className="news-card__title">{project.title}</h2>
+								<h5 className="news-card__title">{project.title}</h5>
 
 								<div className="news-card__details-wrapper">
 									<p className="news-card__excerpt">{project.text}</p>

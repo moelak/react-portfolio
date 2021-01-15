@@ -177,6 +177,15 @@ h2.news-card__title {
 	.header__project h1 {
 		font-size: 32px;
 	}
+
+	.news-card {
+		/* border: 1px solid #1976d2; */
+		margin: 0rem;
+	}
+
+	.content-wrapper {
+		padding: 0rem;
+	}
 }
 
 .news-card__excerpt {

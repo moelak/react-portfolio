@@ -9,7 +9,7 @@
 	display: flex;
 	flex-wrap: wrap;
 	gap: 70px;
-	padding-bottom: 150px;
+	/* padding-bottom: 150px; */
 }
 
 .header__testimonial {
@@ -112,6 +112,24 @@
 .details {
 	margin-top: 20px;
 }
+
+_::-webkit-full-page-media,
+_:future,
+:root .header__testimonial {
+	width: 100%;
+	text-align: center;
+	position: relative;
+	padding-top: 30px;
+	margin-bottom: 70px;
+}
+
+_::-webkit-full-page-media,
+_:future,
+:root .testimonials .card {
+	width: 330px;
+	margin-bottom: 70px;
+}
+
 @media only screen and (max-width: 879px) {
 	.right__line {
 		display: none;
