@@ -106,45 +106,6 @@ h2.title {
 	margin-top: 0;
 }
 
-@media screen and (max-width: 1050px) {
-	.about-container {
-		grid-gap: 5rem;
-	}
-}
-
-@media screen and (max-width: 1000px) {
-	form {
-		width: 290px;
-	}
-
-	.about-content h2 {
-		font-size: 2.4rem;
-		margin: 8px 0;
-	}
-
-	.img img {
-		width: 400px;
-	}
-}
-
-@media screen and (max-width: 991px) {
-	.about-container {
-		grid-template-columns: 1fr;
-	}
-
-	.img {
-		display: none;
-	}
-
-	.wave {
-		display: none;
-	}
-
-	.about-content {
-		justify-content: center;
-	}
-}
-
 /* The device with borders */
 .smartphone {
 	position: relative;
@@ -202,6 +163,45 @@ h2.title {
 
 .top_image img {
 	width: 328px;
+}
+
+@media screen and (max-width: 1050px) {
+	.about-container {
+		grid-gap: 5rem;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	form {
+		width: 290px;
+	}
+
+	.about-content h2 {
+		font-size: 2.4rem;
+		margin: 8px 0;
+	}
+
+	.img img {
+		width: 400px;
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.about-container {
+		grid-template-columns: 1fr;
+	}
+
+	.img {
+		display: none;
+	}
+
+	.wave {
+		display: none;
+	}
+
+	.about-content {
+		justify-content: center;
+	}
 }
 
 @media screen and (max-width: 415px) {

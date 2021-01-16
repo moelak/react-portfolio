@@ -185,6 +185,7 @@ h2.news-card__title {
 
 	.content-wrapper {
 		padding: 0rem;
+		display: flex !important;
 	}
 }
 
