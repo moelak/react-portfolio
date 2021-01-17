@@ -29,7 +29,7 @@ const projectData = [
 		title: 'self_improvment',
 		animation: 'fade-down-left',
 		text: `The app focuses on the positive aspects only. Connect with other people with similar interests Raise awareness on important issues Seek or offer emotional support during tough times Promotes learning.`,
-		link: 'https://lit-depths-25209.herokuapp.com/login',
+		link: 'https://powerful-reef-55363.herokuapp.com/index',
 	},
 
 	{
