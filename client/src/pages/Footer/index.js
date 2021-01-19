@@ -1,7 +1,5 @@
 import React from 'react';
 import './style.css';
-import Pdf from '../../pdf/Resume-Mohammad-Laknahour.pdf';
-import ReactDOM from 'react-dom';
 import { SocialIcon } from 'react-social-icons';
 
 const Footer = () => {
@@ -26,6 +24,13 @@ const Footer = () => {
 				</span>
 				<span className="github">
 					<SocialIcon url="https://github.com/moelak" />
+				</span>
+				<span className="gmail">
+					<SocialIcon
+						url="mailto: m.laknahour1990@gmail.com"
+						network="email"
+						bgColor="#DD4B38"
+					/>
 				</span>
 			</div>
 		</footer>

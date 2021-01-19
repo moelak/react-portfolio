@@ -12,6 +12,8 @@ const FormPage = () => {
 	const [showSuccess, setShowSuccess] = useState(false);
 	const [showDanger, setShowDanger] = useState(false);
 	const [activeBtn, setActiveBtn] = useState(true);
+	const [emailVerifcation, setemailVerifcation] = useState(false);
+	const [emailConfirmation, setemailConfirmation] = useState(false);
 
 	const handleClick = event => {
 		event.preventDefault();
@@ -57,14 +59,36 @@ const FormPage = () => {
 			dataToSuubmite.subject !== '' &&
 			dataToSuubmite.textarea !== ''
 		) {
-			setShowSuccess(true);
+			console.log('hereeeee');
+			let reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+			let regConfirmation = /^\w+([\.-]?\w+)*@gmail+([\.-]?\w+)*(\.\w{2,3})+$/;
+			if (reg.test(dataToSuubmite.email) === false) {
+				console.log('Email is Not Correct');
+				setemailVerifcation(true);
+				setTimeout(() => {
+					setemailVerifcation(false);
+				}, 12000);
+				return false;
+			} else if (regConfirmation.test(dataToSuubmite.email) === false) {
+				setemailConfirmation(true);
+				setTimeout(() => {
+					setemailConfirmation(false);
+				}, 12000);
+			} else {
+				console.log('Email could be Correct');
+				setemailVerifcation(false);
+			}
 
+			setShowSuccess(true);
+			console.log('dataToSuubmite.email', dataToSuubmite.email);
 			setTimeout(() => {
 				setShowSuccess(false);
 			}, 4000);
 
 			axios.post('api/sendMail', dataToSuubmite);
 		} else {
+			console.log('hereeeee');
+
 			setShowDanger(true);
 
 			setTimeout(() => {
@@ -83,7 +107,6 @@ const FormPage = () => {
 			</div>
 			<form method="post">
 				<h2>Contact Me</h2>
-
 				<Alert show={showSuccess} variant="success" className="alert">
 					<Alert.Heading>Success message:</Alert.Heading>
 					<p>
@@ -92,9 +115,25 @@ const FormPage = () => {
 					</p>
 				</Alert>
 
+				<Alert show={emailConfirmation} variant="warning" className="alert">
+					<Alert.Heading>Notification:</Alert.Heading>
+					<p>
+						If you never revicved a confimartion email in less than a minute,
+						then please contact me at{' '}
+						<a href="mailto:m.laknahour1990@gmail.com">
+							m.laknahour1990@gmail.com
+						</a>{' '}
+					</p>
+				</Alert>
+
+				<Alert show={emailVerifcation} variant="danger" className="alert">
+					<Alert.Heading>Error message:</Alert.Heading>
+					<p>Please make sure to provide a valid email.</p>
+				</Alert>
+
 				<Alert show={showDanger} variant="danger" className="alert">
 					<Alert.Heading>Error message:</Alert.Heading>
-					<p>There are errors on the form. Please fix them before continuing</p>
+					<p>All fields are required. Please fix them before continuing.</p>
 				</Alert>
 				<div className="row">
 					<div className="col-md-6">

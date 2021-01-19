@@ -6,6 +6,15 @@ const projectData = [
 	{
 		id: 1,
 		image:
+			'https://cdn.educba.com/academy/wp-content/uploads/2016/05/self-improvement.jpg',
+		title: 'self_improvment',
+		animation: 'fade-down-left',
+		text: `The app focuses on the positive aspects only. Connect with other people with similar interests Raise awareness on important issues Seek or offer emotional support during tough times Promotes learning.`,
+		link: 'https://powerful-reef-55363.herokuapp.com/index',
+	},
+	{
+		id: 2,
+		image:
 			'https://www.scienceabc.com/wp-content/uploads/2019/01/face-detect.jpg',
 		title: 'Face & Mouth Detection',
 		animation: 'fade-down-right',
@@ -14,22 +23,12 @@ const projectData = [
 	},
 
 	{
-		id: 2,
+		id: 3,
 		image: 'https://digitalasset.intuit.com/IMAGE/A8ViK8rl9/mint-XS.jpg',
 		title: 'Budget Tracker',
 		animation: 'fade-down',
 		text: `The budget tracker will be able to add expenses and deposits to their budget with or without a connection. When entering transactions offline, they should populate the total when brought back online.`,
 		link: 'https://github.com/moelak/budgetTracker',
-	},
-
-	{
-		id: 3,
-		image:
-			'https://cdn.educba.com/academy/wp-content/uploads/2016/05/self-improvement.jpg',
-		title: 'self_improvment',
-		animation: 'fade-down-left',
-		text: `The app focuses on the positive aspects only. Connect with other people with similar interests Raise awareness on important issues Seek or offer emotional support during tough times Promotes learning.`,
-		link: 'https://powerful-reef-55363.herokuapp.com/index',
 	},
 
 	{
